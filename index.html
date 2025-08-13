@@ -441,6 +441,7 @@
         const data = await response.json();
 
         console.log("Twilio token received.");
+        console.log("Server Response Body:", data);
         device = new Twilio.Device(data.token, {
             codecPreferences: ['opus', 'pcmu'] // Helps with audio quality
         });
