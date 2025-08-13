@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered Audio Creations by Saif Ullah. Voiceovers, custom music, voice cloning, audio enhancement.">
+    <title>AI-Powered Audio Solutions - Saif - AI Creative Artist</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-audio-player { background-color: #2a2a33; border-radius: 0.5rem; padding: 1rem; border-left: 4px solid var(--accent-purple); }
+        .info-tag { display: inline-block; background-color: rgba(var(--accent-blue-rgb), 0.1); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(var(--accent-blue-rgb), 0.3); margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .info-tag.orange { background-color: rgba(var(--accent-orange-rgb), 0.1); color: var(--accent-orange); border: 1px solid rgba(var(--accent-orange-rgb), 0.3); }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-[10000]">
+        <div class="loader-spark"></div>
+        <p class="text-2xl font-heading-d2 ml-4">LOADING...</p>
+    </div>
+    <header id="mainHeader">
+        <div class="header-content-wrapper">
+            <a href="index.html#home" id="headerLogoName" class="font-bold tracking-tight">Saif</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#tools" class="nav-link">Toolkit</a>
+                <a href="game_page.html" class="nav-link btn btn-secondary-outline text-sm py-2 px-4">Play Game</a>
+                <a href="index.html#contact" class="btn btn-primary-orange text-sm py-2 px-5">Contact Me</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" aria-label="Open mobile menu" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 shadow-xl py-2">
+            <a href="index.html#about" class="block px-6 py-3 mobile-link">About</a>
+            <a href="index.html#skills" class="block px-6 py-3 mobile-link">Skills</a>
+            <a href="index.html#projects" class="block px-6 py-3 mobile-link">Projects</a>
+            <a href="index.html#tools" class="block px-6 py-3 mobile-link">Toolkit</a>
+            <a href="game_page.html" class="block px-6 py-3 mobile-link">Play Game</a>
+            <a href="index.html#contact" class="block px-6 py-3 mobile-link">Contact Me</a>
+        </div>
+    </header>
+    <main class="pt-24">
+        <section id="projectDetail" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="section-title"><span class="highlight-blue">AI-Powered</span> <span class="highlight-orange">Audio Solutions</span></h1>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        A suite of AI audio solutions, including realistic multilingual voiceovers, custom AI-generated music, advanced voice cloning, and audio enhancement services.
+                    </p>
+                    <a href="index.html#projects" class="btn-back-to-projects mt-6"><i class="fas fa-arrow-left mr-2"></i>Back to All Projects</a>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Voiceover & Music Generation</h2>
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-2 text-accent-purple">Service: Realistic Text-to-Speech</h4>
+                            <div class="mb-4"><span class="info-tag">Use Case: Narration, E-learning</span></div>
+                            <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">Input Script: "Welcome to an auditory journey. Experience the clarity and versatility of AI-generated voice..."</p>
+                            <div class="custom-audio-player">
+                                <audio controls class="w-full"><source src="assets/audio/ai_audio_voiceover_sample_english.mp3" type="audio/mpeg"></audio>
+                            </div>
+                        </div>
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-2 text-accent-purple">Service: Custom AI-Generated Music</h4>
+                             <div class="mb-4"><span class="info-tag orange">Use Case: Background Music, Branding</span></div>
+                            <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">Mood Brief: "Create an uplifting and inspiring orchestral track with a modern electronic touch..."</p>
+                            <div class="custom-audio-player">
+                                <audio controls class="w-full"><source src="assets/audio/ai_audio_custom_music_cinematic_brand.mp3" type="audio/mpeg"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-blue pl-4">Advanced Audio Services</h2>
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-2 text-accent-purple">Service: Voice Cloning</h4>
+                            <div class="mb-4"><span class="info-tag">Application: Personalized Content</span></div>
+                            <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">Process: A client's voice sample is used to generate new speech from a script, ensuring brand consistency.</p>
+                             <div class="custom-audio-player">
+                                <audio controls class="w-full"><source src="assets/audio/ai_audio_voice_cloning_personalized_message.mp3" type="audio/mpeg"></audio>
+                            </div>
+                        </div>
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-2 text-accent-purple">Service: Audio Enhancement</h4>
+                             <div class="mb-4"><span class="info-tag orange">Technique: Denoising & Restoration</span></div>
+                             <p class="italic text-text-secondary-dark mb-2">Input Audio (Noisy):</p>
+                             <div class="custom-audio-player mb-3"><audio controls class="w-full"><source src="assets/audio/ai_audio_denoising_input_noisy.mp3" type="audio/mpeg"></audio></div>
+                            <p class="italic text-text-secondary-dark mb-2">Output Audio (Cleaned):</p>
+                            <div class="custom-audio-player"><audio controls class="w-full"><source src="assets/audio/ai_audio_denoising_output_clean.mp3" type="audio/mpeg"></audio></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-12">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Multilingual & Conversational Audio</h2>
+                     <div class="case-study-card p-4">
+                        <h4 class="text-xl font-semibold mb-2 text-accent-purple">Service: High-Quality Multilingual Voiceovers</h4>
+                        <div class="mb-4"><span class="info-tag">Languages: English, Spanish, French</span></div>
+                        <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">Original Script: "Unlock global markets with AI-powered multilingual voiceovers..."</p>
+                        <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div class="custom-audio-player"><h5 class="text-lg font-medium mb-2 text-accent-orange">English</h5><audio controls class="w-full"><source src="assets/audio/ai_audio_multilingual_voiceover_english.mp3" type="audio/mpeg"></audio></div>
+                            <div class="custom-audio-player"><h5 class="text-lg font-medium mb-2 text-accent-orange">Spanish</h5><audio controls class="w-full"><source src="assets/audio/ai_audio_multilingual_voiceover_spanish.mp3" type="audio/mpeg"></audio></div>
+                            <div class="custom-audio-player"><h5 class="text-lg font-medium mb-2 text-accent-orange">French</h5><audio controls class="w-full"><source src="assets/audio/ai_audio_multilingual_voiceover_french.mp3" type="audio/mpeg"></audio></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section text-center my-20 py-16 px-6">
+                    <h2 class="text-4xl font-bold font-heading-main mb-4 text-white">Looking for the Perfect Sound?</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">From crystal-clear voiceovers to custom-composed music, I provide a full suite of AI-powered audio services to bring your project to life.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="index.html#contact" class="btn-cta-primary text-lg py-3 px-8">Discuss Your Audio Needs</a>
+                        <a href="index.html#projects" class="btn-cta-secondary text-lg py-3 px-8">Explore Other Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear"></span> Saif. AI Creative Artist. Made by Janoob.</p>
+            <p class="text-xs mt-1">Building the future of digital content with every pixel and prompt.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

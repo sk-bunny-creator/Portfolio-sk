@@ -1,0 +1,58 @@
+{
+  "runSettings": {
+    "temperature": 1.0,
+    "model": "models/gemini-2.5-pro-preview-05-06",
+    "topP": 0.95,
+    "topK": 64,
+    "maxOutputTokens": 65536,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "OFF"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": false,
+    "enableSearchAsATool": false,
+    "enableBrowseAsATool": false,
+    "enableAutoFunctionResponse": false
+  },
+  "citations": [{
+    "uri": "https://github.com/Tsarkashrk/FreshGlow"
+  }],
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "driveAudio": {
+        "id": "1Yf5pQoQDPAJ1teJRnyneEAcsPXNh35jJ"
+      },
+      "role": "user",
+      "tokenCount": 13994
+    }, {
+      "driveAudio": {
+        "id": "1GeF_aa1d7t4ruG-qd727j6T_PzK07tbf"
+      },
+      "role": "user",
+      "tokenCount": 10571
+    }, {
+      "text": "convert audio to text",
+      "role": "user",
+      "tokenCount": 5
+    }, {
+      "text": "",
+      "role": "model"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

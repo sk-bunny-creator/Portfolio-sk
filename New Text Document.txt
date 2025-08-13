@@ -1,0 +1,9 @@
+project_ai_audio_solutions_details
+project_ai_image_gallery_details
+project_ai_lipsync_details
+project_ai_marketing_details
+project_ai_prompts_details
+project_ai_video_portfolio_details
+project_interactive_data_viz_details
+project_linkedin_branding_details
+game_page

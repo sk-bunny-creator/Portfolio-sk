@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Video Generation Portfolio of Saif Ullah - AI Creative Artist. Short films, viral content, AI avatars, and more.">
+    <title>AI Video Generation Portfolio - Saif - AI Creative Artist</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .info-tag { display: inline-block; background-color: rgba(var(--accent-blue-rgb), 0.1); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(var(--accent-blue-rgb), 0.3); margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .info-tag.orange { background-color: rgba(var(--accent-orange-rgb), 0.1); color: var(--accent-orange); border: 1px solid rgba(var(--accent-orange-rgb), 0.3); }
+        .info-tag.purple { background-color: rgba(var(--accent-purple-rgb), 0.1); color: var(--accent-purple); border: 1px solid rgba(var(--accent-purple-rgb), 0.3); }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-[10000]">
+        <div class="loader-spark"></div>
+        <p class="text-2xl font-heading-d2 ml-4">LOADING...</p>
+    </div>
+    <header id="mainHeader">
+        <div class="header-content-wrapper">
+            <a href="index.html#home" id="headerLogoName" class="font-bold tracking-tight">Saif</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#tools" class="nav-link">Toolkit</a>
+                <a href="game_page.html" class="nav-link btn btn-secondary-outline text-sm py-2 px-4">Play Game</a>
+                <a href="index.html#contact" class="btn btn-primary-orange text-sm py-2 px-5">Contact Me</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" aria-label="Open mobile menu" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 shadow-xl py-2">
+            <a href="index.html#about" class="block px-6 py-3 mobile-link">About</a>
+            <a href="index.html#skills" class="block px-6 py-3 mobile-link">Skills</a>
+            <a href="index.html#projects" class="block px-6 py-3 mobile-link">Projects</a>
+            <a href="index.html#tools" class="block px-6 py-3 mobile-link">Toolkit</a>
+            <a href="game_page.html" class="block px-6 py-3 mobile-link">Play Game</a>
+            <a href="index.html#contact" class="block px-6 py-3 mobile-link">Contact Me</a>
+        </div>
+    </header>
+    <main class="pt-24">
+        <section id="projectDetail" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="section-title text-4xl md:text-5xl lg:text-6xl"><span class="highlight-blue">AI Video</span> <span class="highlight-orange">Generation</span></h1>
+                    <h2 class="text-2xl font-heading mt-2 text-text-primary">Crafting Narratives with Artificial Intelligence</h2>
+                    <p class="section-subtitle max-w-3xl mx-auto mt-4">
+                        Explore a diverse portfolio of AI-driven video production, from captivating narrative short films and viral content snippets to sophisticated AI avatar presentations and automated video solutions.
+                    </p>
+                </div>
+                <div class="project-detail-section mb-20">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Narrative Short Films</h2>
+                    <div class="case-study-card p-4">
+                        <h4 class="text-xl font-semibold mb-3 text-accent-purple">Case Study: Cinematic Storytelling</h4>
+                        <div class="mb-4">
+                            <span class="info-tag">Objective: Narrative Film</span>
+                            <span class="info-tag orange">Style: Sci-Fi Drama</span>
+                        </div>
+                        <video controls width="100%" class="rounded" poster="assets/images/project-posters/ai_video_short_film_main_poster.jpg" preload="metadata">
+                            <source src="assets/videos/ai_video_short_film_main.mp4#t=0.1" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-20">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-blue pl-4">Animating Static Images</h2>
+                     <div class="case-study-card p-6">
+                        <h4 class="text-xl font-semibold mb-4 text-center text-accent-purple">Case Study: Static Image to Dynamic Motion</h4>
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="text-center border-r border-gray-700 pr-6">
+                                <h5 class="text-2xl font-bold mb-3 text-text-secondary">BEFORE</h5>
+                                <p class="text-sm mb-3">A static character image.</p>
+                                <img src="assets/images/project-assets/ai_video_animating_static_input_image.jpg" alt="Input Static Image" class="rounded-lg shadow-md mx-auto w-full object-contain max-h-96" loading="lazy">
+                            </div>
+                             <div class="text-center">
+                                <h5 class="text-2xl font-bold mb-3 text-accent-blue">AFTER</h5>
+                                <p class="text-sm mb-3">The character brought to life with motion capture data.</p>
+                                <video controls loop muted autoplay playsinline width="100%" class="rounded-lg shadow-md mx-auto w-full object-contain max-h-96" poster="assets/images/project-posters/ai_video_animating_static_output_video_poster.jpg" preload="metadata">
+                                    <source src="assets/videos/ai_video_animating_static_output_video.mp4#t=0.1" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="text-center mt-6">
+                           <span class="info-tag orange">Technique: Motion Capture Style Animation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-20">
+                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-purple pl-4">Audience Engagement Content</h2>
+                     <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-3 text-accent-purple">Viral Content Snippets</h4>
+                            <div class="mb-4">
+                                <span class="info-tag">Objective: Social Media Engagement</span>
+                                <span class="info-tag orange">Format: 9:16 Vertical Video</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <video controls width="100%" class="rounded max-h-[450px]" poster="assets/images/project-posters/ai_video_viral_content_sample1_poster.jpg" preload="metadata">
+                                    <source src="assets/videos/ai_video_viral_content_sample1.mp4#t=0.1" type="video/mp4">
+                                </video>
+                                <video controls width="100%" class="rounded max-h-[450px]" poster="assets/images/project-posters/ai_video_viral_content_sample2_poster.jpg" preload="metadata">
+                                    <source src="assets/videos/ai_video_viral_content_sample2.mp4#t=0.1" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="case-study-card p-4">
+                            <h4 class="text-xl font-semibold mb-3 text-accent-purple">AI Avatars in Presentations</h4>
+                             <div class="mb-4">
+                                <span class="info-tag">Objective: Corporate Communication</span>
+                            </div>
+                            <video controls width="100%" class="rounded" poster="assets/images/project-posters/ai_video_avatar_presentation_sample_poster.jpg" preload="metadata">
+                                <source src="assets/videos/ai_video_avatar_presentation_sample.mp4#t=0.1" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-20">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Research-Backed Explainer Videos</h2>
+                     <div class="case-study-card p-4">
+                        <h4 class="text-xl font-semibold mb-3 text-accent-purple">Case Study: Explaining Complex Topics</h4>
+                        <p class="italic text-text-secondary-dark mb-4">"Understanding Google VEO3: Capabilities, Limitations, and Future Impact on Video Generation."</p>
+                        <div class="mb-4">
+                            <span class="info-tag orange">Objective: Educational Content</span>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h5 class="text-lg font-semibold mb-2 text-accent-blue">Standard Explainer Video</h5>
+                                <video controls width="100%" class="rounded" poster="assets/images/project-posters/ai_video_explainer_veo3_overview_poster.jpg" preload="metadata">
+                                    <source src="assets/videos/ai_video_explainer_veo3_overview.mp4#t=0.1" type="video/mp4">
+                                </video>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-semibold mb-2 text-accent-blue">AI Avatar Explainer</h5>
+                                <video controls width="100%" class="rounded" poster="assets/images/project-posters/ai_video_explainer_veo3_avatar_poster.jpg" preload="metadata">
+                                    <source src="assets/videos/ai_video_explainer_veo3_avatar.mp4#t=0.1" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section text-center my-20 py-16 px-6">
+                    <h2 class="text-4xl font-bold font-heading-main mb-4 text-white">Ready to Bring Your Vision to Life?</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">Whether you need a compelling narrative film, engaging marketing content, or a unique animated sequence, my expertise in AI video generation can make it happen.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="index.html#contact" class="btn-cta-primary text-lg py-3 px-8">Start Your AI Video Project</a>
+                        <a href="index.html#projects" class="btn-cta-secondary text-lg py-3 px-8">Explore Other Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear"></span> Saif. AI Creative Artist. Made by Janoob.</p>
+            <p class="text-xs mt-1">Building the future of digital content with every pixel and prompt.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Image Generation Showcase by Saif Ullah - AI Creative Artist. Midjourney, DALL-E 3, conceptual art, branding assets.">
+    <title>AI Image Generation Gallery - Saif - AI Creative Artist</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .masonry-grid { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item { display: inline-block; width: 100%; margin-bottom: 1.5rem; break-inside: avoid; }
+        .info-tag { display: inline-block; background-color: rgba(var(--accent-blue-rgb), 0.1); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(var(--accent-blue-rgb), 0.3); margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .info-tag.orange { background-color: rgba(var(--accent-orange-rgb), 0.1); color: var(--accent-orange); border: 1px solid rgba(var(--accent-orange-rgb), 0.3); }
+        .case-study-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-[10000]">
+        <div class="loader-spark"></div>
+        <p class="text-2xl font-heading-d2 ml-4">LOADING...</p>
+    </div>
+    <header id="mainHeader">
+        <div class="header-content-wrapper">
+            <a href="index.html#home" id="headerLogoName" class="font-bold tracking-tight">Saif</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#tools" class="nav-link">Toolkit</a>
+                <a href="game_page.html" class="nav-link btn btn-secondary-outline text-sm py-2 px-4">Play Game</a>
+                <a href="index.html#contact" class="btn btn-primary-orange text-sm py-2 px-5">Contact Me</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" aria-label="Open mobile menu" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 shadow-xl py-2">
+            <a href="index.html#about" class="block px-6 py-3 mobile-link">About</a>
+            <a href="index.html#skills" class="block px-6 py-3 mobile-link">Skills</a>
+            <a href="index.html#projects" class="block px-6 py-3 mobile-link">Projects</a>
+            <a href="index.html#tools" class="block px-6 py-3 mobile-link">Toolkit</a>
+            <a href="game_page.html" class="block px-6 py-3 mobile-link">Play Game</a>
+            <a href="index.html#contact" class="block px-6 py-3 mobile-link">Contact Me</a>
+        </div>
+    </header>
+    <main class="pt-24">
+        <section id="projectDetail" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="section-title"><span class="highlight-blue">AI Image</span> <span class="highlight-orange">Generation Gallery</span></h1>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        This gallery showcases a diverse portfolio of AI-generated visuals for branding, concept art, and unique digital content, demonstrating versatility and reducing reliance on stock photography.
+                    </p>
+                    <a href="index.html#projects" class="btn-back-to-projects mt-6"><i class="fas fa-arrow-left mr-2"></i>Back to All Projects</a>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Conceptual Image Generation</h2>
+                     <div class="case-study-card p-4 mb-8">
+                        <h4 class="text-xl font-semibold mb-3 text-accent-purple">Deep Dive: Prompt Enhancement</h4>
+                        <div class="grid md:grid-cols-2 gap-4 items-start mb-4">
+                            <div>
+                                <h5 class="text-lg font-medium mb-1 text-text-secondary-dark">Client's Rough Prompt:</h5>
+                                <p class="italic text-sm text-gray-400">"A cat happily flying high in the blue sky."</p>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-medium mb-1 text-text-secondary-dark">My Enhanced Prompt:</h5>
+                                <p class="italic text-sm text-gray-400">"Photorealistic, whimsical portrait of a fluffy ginger cat with joyful expression, soaring gracefully through a vibrant azure sky with scattered cumulus clouds, cinematic lighting, high detail."</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="text-lg font-medium mb-2 text-text-secondary-dark">Generated Image:</h5>
+                            <img src="assets/images/project-assets/ai_image_conceptual_prompt_enhanced_cat.jpg" alt="Enhanced Cat Image" class="rounded shadow-lg mx-auto max-w-sm w-full" loading="lazy">
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-semibold my-6 text-accent-purple text-center">Gallery of Conceptual Images</h4>
+                    <div class="masonry-grid">
+                        <div class="masonry-item"><img src="assets/images/project-assets/ai_image_conceptual_example1.jpg" alt="Conceptual AI Image 1" class="rounded shadow-lg w-full h-auto" loading="lazy"></div>
+                        <div class="masonry-item"><img src="assets/images/project-assets/ai_image_conceptual_example2.jpg" alt="Conceptual AI Image 2" class="rounded shadow-lg w-full h-auto" loading="lazy"></div>
+                        <div class="masonry-item"><img src="assets/images/project-assets/ai_image_conceptual_example3.jpg" alt="Conceptual AI Image 3" class="rounded shadow-lg w-full h-auto" loading="lazy"></div>
+                        <div class="masonry-item"><img src="assets/images/project-assets/ai_image_conceptual_example4.jpg" alt="Conceptual AI Image 4" class="rounded shadow-lg w-full h-auto" loading="lazy"></div>
+                        <div class="masonry-item"><img src="assets/images/project-assets/ai_image_conceptual_example5.jpg" alt="Conceptual AI Image 5" class="rounded shadow-lg w-full h-auto" loading="lazy"></div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-blue pl-4">Crafting Unique Branding Elements with AI</h2>
+                    <div class="case-study-card p-4">
+                        <div class="mb-4"><span class="info-tag">Objective: Brand Identity</span></div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md text-center">
+                                <img src="assets/images/project-assets/ai_image_branding_asset_logos.jpg" alt="AI Generated Logos" class="rounded mb-2 w-full h-56 object-contain" loading="lazy">
+                                <h5 class="text-md font-semibold text-accent-purple">AI Logos</h5>
+                            </div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md text-center">
+                                <img src="assets/images/project-assets/ai_image_branding_asset_banners.jpg" alt="AI Generated Banners" class="rounded mb-2 w-full h-56 object-contain" loading="lazy">
+                                <h5 class="text-md font-semibold text-accent-purple">AI Banners</h5>
+                            </div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md text-center">
+                                <img src="assets/images/project-assets/ai_image_branding_asset_mockups.jpg" alt="AI Generated Mockups" class="rounded mb-2 w-full h-56 object-contain" loading="lazy">
+                                 <h5 class="text-md font-semibold text-accent-purple">AI Mockups</h5>
+                            </div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md text-center">
+                                <img src="assets/images/project-assets/ai_image_branding_asset_charts.jpg" alt="AI Generated Visual Charts" class="rounded mb-2 w-full h-56 object-contain" loading="lazy">
+                                 <h5 class="text-md font-semibold text-accent-purple">AI Visual Charts</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-12">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Precision Image Manipulation with AI</h2>
+                     <div class="case-study-card p-4">
+                        <div class="mb-4">
+                            <span class="info-tag orange">Technique: Object Removal</span>
+                            <span class="info-tag orange">Technique: Object Addition</span>
+                            <span class="info-tag orange">Technique: Style Transfer</span>
+                            <span class="info-tag orange">Technique: Pose Adjustment</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md"><img src="assets/images/project-assets/ai_image_editing_object_removal.jpg" alt="AI Object Removal" class="rounded mb-2 w-full h-64 object-contain" loading="lazy"><h5 class="text-md font-semibold text-accent-purple text-center">Object Removal</h5></div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md"><img src="assets/images/project-assets/ai_image_editing_object_addition.jpg" alt="AI Object Addition" class="rounded mb-2 w-full h-64 object-contain" loading="lazy"><h5 class="text-md font-semibold text-accent-purple text-center">Object Addition</h5></div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md"><img src="assets/images/project-assets/ai_image_editing_style_transfer.jpg" alt="AI Style Transfer" class="rounded mb-2 w-full h-64 object-contain" loading="lazy"><h5 class="text-md font-semibold text-accent-purple text-center">Style Changes</h5></div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md"><img src="assets/images/project-assets/ai_image_editing_pose_adjustment.jpg" alt="AI Pose Adjustment" class="rounded mb-2 w-full h-64 object-contain" loading="lazy"><h5 class="text-md font-semibold text-accent-purple text-center">Pose Adjustments</h5></div>
+                            <div class="bg-primary-bg-dark p-3 rounded-md shadow-md"><img src="assets/images/project-assets/ai_image_editing_in_image_text.jpg" alt="AI In-Image Text Editing" class="rounded mb-2 w-full h-64 object-contain" loading="lazy"><h5 class="text-md font-semibold text-accent-purple text-center">In-Image Text Editing</h5></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section text-center my-20 py-16 px-6">
+                    <h2 class="text-4xl font-bold font-heading-main mb-4 text-white">Have an Idea for a Visual Project?</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">From stunning concept art to pixel-perfect branding assets, I can generate the unique visuals your project needs. Let's create something unforgettable.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="index.html#contact" class="btn-cta-primary text-lg py-3 px-8">Create an Image with Me</a>
+                        <a href="index.html#projects" class="btn-cta-secondary text-lg py-3 px-8">Explore Other Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear"></span> Saif. AI Creative Artist. Made by Janoob.</p>
+            <p class="text-xs mt-1">Building the future of digital content with every pixel and prompt.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

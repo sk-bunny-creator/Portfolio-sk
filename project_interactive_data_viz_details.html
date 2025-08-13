@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Data Visualization projects by Saif Ullah using P5.js. Transforming complex data into engaging reports and web elements.">
+    <title>Interactive Data Visualization - Saif - AI Creative Artist</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     <style>
+        .info-tag { display: inline-block; background-color: rgba(var(--accent-blue-rgb), 0.1); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(var(--accent-blue-rgb), 0.3); margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .info-tag.orange { background-color: rgba(var(--accent-orange-rgb), 0.1); color: var(--accent-orange); border: 1px solid rgba(var(--accent-orange-rgb), 0.3); }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-[10000]">
+        <div class="loader-spark"></div>
+        <p class="text-2xl font-heading-d2 ml-4">LOADING...</p>
+    </div>
+    <header id="mainHeader">
+        <div class="header-content-wrapper">
+            <a href="index.html#home" id="headerLogoName" class="font-bold tracking-tight">Saif</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#tools" class="nav-link">Toolkit</a>
+                <a href="game_page.html" class="nav-link btn btn-secondary-outline text-sm py-2 px-4">Play Game</a>
+                <a href="index.html#contact" class="btn btn-primary-orange text-sm py-2 px-5">Contact Me</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" aria-label="Open mobile menu" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 shadow-xl py-2">
+            <a href="index.html#about" class="block px-6 py-3 mobile-link">About</a>
+            <a href="index.html#skills" class="block px-6 py-3 mobile-link">Skills</a>
+            <a href="index.html#projects" class="block px-6 py-3 mobile-link">Projects</a>
+            <a href="index.html#tools" class="block px-6 py-3 mobile-link">Toolkit</a>
+            <a href="game_page.html" class="block px-6 py-3 mobile-link">Play Game</a>
+            <a href="index.html#contact" class="block px-6 py-3 mobile-link">Contact Me</a>
+        </div>
+    </header>
+    <main class="pt-24">
+        <section id="projectDetail" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="section-title"><span class="highlight-blue">Interactive Data</span> <span class="highlight-orange">Visualization</span></h1>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        Designing and developing engaging interactive data visualizations, transforming complex datasets into accessible, insightful, and dynamic reports and web elements.
+                    </p>
+                    <a href="index.html#projects" class="btn-back-to-projects mt-6"><i class="fas fa-arrow-left mr-2"></i>Back to All Projects</a>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Interactive Web Report from Complex Data</h2>
+                    <div class="case-study-card p-4">
+                        <div class="mb-4">
+                            <span class="info-tag">Objective: Data Analysis & KPI Tracking</span>
+                            <span class="info-tag orange">Core Technology: P5.js</span>
+                        </div>
+                        <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">"Analyze multi-source logistics data from 100 shopping malls over 5 years to identify key performance indicators, operational bottlenecks, and visualize comparative efficiency in an interactive dashboard."</p>
+                        <h4 class="text-xl font-semibold mb-2 text-accent-purple">Live Interaction Showcase</h4>
+                        <div class="max-w-5xl mx-auto">
+                            <video controls width="100%" class="rounded border border-gray-700" poster="assets/images/project-posters/data_viz_interactive_sales_report_poster.jpg" preload="metadata">
+                                <source src="assets/videos/data_viz_interactive_sales_report.mp4#t=0.1" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-16">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-blue pl-4">Animating Static Infographics & Charts</h2>
+                    <div class="case-study-card p-4">
+                        <div class="mb-4">
+                            <span class="info-tag">Goal: Enhance Engagement & Clarity</span>
+                        </div>
+                         <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2 text-accent-purple">Before: Static Chart</h4>
+                                <img src="assets/images/project-assets/data_viz_input_static_sales_chart.jpg" alt="Input Static Sales Chart" class="rounded w-full h-auto max-h-80 object-contain" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2 text-accent-purple">After: Animated Infographic</h4>
+                                <img src="assets/images/project-assets/data_viz_output_animated_sales_chart.gif" alt="Animated Sales Chart GIF" class="rounded w-full h-auto max-h-80 object-contain border border-gray-700" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-section mb-12">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-accent-orange pl-4">Generative Data Art and Web Elements</h2>
+                    <div class="case-study-card p-4">
+                        <div class="mb-4">
+                             <span class="info-tag orange">Application: Generative Art</span>
+                             <span class="info-tag">Use Case: Unique Web Design</span>
+                        </div>
+                        <p class="italic text-text-secondary-dark bg-gray-800 p-3 rounded mb-4 text-sm">"Create a unique, data-driven generative art piece for a website's hero section. The visualization should subtly reflect real-time user engagement metrics, providing an aesthetically pleasing and intriguing experience."</p>
+                        <h4 class="text-xl font-semibold mb-2 text-accent-purple">Live Element Showcase</h4>
+                        <div class="max-w-5xl mx-auto">
+                            <video controls width="100%" class="rounded border border-gray-700" poster="assets/images/project-posters/data_viz_p5js_generative_web_art_sample_poster.jpg" preload="metadata">
+                                <source src="assets/videos/data_viz_p5js_generative_web_art_sample.mp4#t=0.1" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-section text-center my-20 py-16 px-6">
+                    <h2 class="text-4xl font-bold font-heading-main mb-4 text-white">Want to Bring Your Data to Life?</h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">From insightful interactive reports to beautiful generative art, I can help you turn complex data into compelling visual stories.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="index.html#contact" class="btn-cta-primary text-lg py-3 px-8">Visualize Your Data</a>
+                        <a href="index.html#projects" class="btn-cta-secondary text-lg py-3 px-8">Explore Other Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear"></span> Saif. AI Creative Artist. Made by Janoob.</p>
+            <p class="text-xs mt-1">Building the future of digital content with every pixel and prompt.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

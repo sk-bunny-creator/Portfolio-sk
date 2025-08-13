@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saif Ullah - AI Creative Artist specializing in AI-driven video production, image design, audio solutions, prompt engineering, and digital marketing strategy.">
+    <title>Saif - AI Creative Artist Portfolio</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Plaster&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&family=Plaster&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- =========== NETLIFY FORM BLUEPRINT (HIDDEN) - DO NOT CHANGE =========== -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- ======================================================================= -->
+
+
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-[10000]">
+        <div class="loader-spark"></div>
+    </div>
+
+    <header id="mainHeader">
+        <div class="header-content-wrapper">
+            <a href="#home" class="saif-logo font-plaster">Sa<span class="text-primary-orange">if</span></a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact Me</a>
+                <a href="game_page.html" class="nav-link">Play Game</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" aria-label="Open mobile menu" class="focus:outline-none p-2 neumorphic-outset rounded-full">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 py-4">
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center py-16 md:py-0 relative">
+            <div class="container mx-auto px-6 w-full z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left animate-on-scroll">
+                        <h1 id="heroHeadline" class="text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">Saifullah<br><span class='hero-ai'>AI</span> <span class='hero-creative'>Creative</span> <span class='hero-artist'>Artist</span></h1>
+                        <p class="text-lg md:text-xl mb-8 font-normal">
+                            As a specialist in generative AI, I use cutting-edge tools to transform your concepts into captivating videos, designs, and audio. I engineer strategic AI workflows that deliver high-impact, professional content to make your brand stand out.
+                        </p>
+                        <div class="space-y-4 md:space-y-0 md:space-x-4 animate-on-scroll delay-500 flex flex-col sm:flex-row justify-center md:justify-start">
+                            <a href="#projects" class="hero-cta-btn neumorphic-outset">Explore My Work</a>
+                            <a href="#contact" class="hero-cta-btn neumorphic-outset">Let's Collaborate</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center animate-on-scroll delay-200">
+                         <div class="w-3/4 max-w-xs profile-image-container p-2">
+                            <img src="assets/images/saif-ullah-profile.webp" loading="lazy" alt="Saif Ullah - AI Creative Artist" class="w-full h-auto object-cover profile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                 <div class="text-center animate-on-scroll mb-12">
+                    <h2 class="section-title">My <span class="highlight-blue">AI-Powered</span> Capabilities</h2>
+                    <p class="section-subtitle">A diverse toolkit to bring your creative and marketing visions to life, detailed below.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="skill-card animate-on-scroll">
+                        <h3 class="skill-card-title"><i class="fas fa-film"></i><span>AI Video Production</span></h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Crafting engaging short films and viral content with generative AI.</li>
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Integrating custom or cloned AI avatars into marketing videos.</li>
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Automating short clip creation from long-form content.</li>
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Animating static images to mimic real-world motion.</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card animate-on-scroll delay-100">
+                        <h3 class="skill-card-title"><i class="fas fa-palette"></i><span>AI Image & Design</span></h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-star text-orange-400"></i>Transforming concepts into unique visuals with Midjourney, DALL-E, etc.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Creating AI-powered branding assets like logos and banners.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Advanced image editing: object removal/addition, style changes.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Designing interactive web elements and concept art.</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card animate-on-scroll delay-200">
+                        <h3 class="skill-card-title"><i class="fas fa-volume-up"></i><span>AI Audio Solutions</span></h3>
+                        <ul class="skill-list">
+                           <li><i class="fas fa-check-circle text-blue-400"></i>Generating realistic voices from text or cloning existing voices.</li>
+                           <li><i class="fas fa-check-circle text-blue-400"></i>Creating custom music and unique sound effects.</li>
+                           <li><i class="fas fa-check-circle text-blue-400"></i>Enhancing audio quality through de-noising and fine-tuning.</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card animate-on-scroll delay-300">
+                        <h3 class="skill-card-title"><i class="fas fa-lightbulb"></i><span>Prompt Engineering</span></h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-star text-orange-400"></i>Crafting sophisticated prompts for VEO3, Kling, Runway, etc.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Utilizing multi-modal inputs for highly specific results.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Guiding clients through iterative refinement processes.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Developing custom prompt libraries (e.g., small GPTs).</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card animate-on-scroll delay-400">
+                        <h3 class="skill-card-title"><i class="fas fa-project-diagram"></i><span>AI Workflow Optimization</span></h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Consulting on efficient AI-driven content pipelines.</li>
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Automating repetitive creative tasks to boost productivity.</li>
+                            <li><i class="fas fa-check-circle text-blue-400"></i>Advising on AI tools to streamline client communication.</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card animate-on-scroll delay-500">
+                        <h3 class="skill-card-title"><i class="fas fa-chart-line"></i><span>Digital Marketing & Strategy</span></h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-star text-orange-400"></i>Creating compelling AI-powered commercial ads.</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Managing and optimizing social media presence (TikTok, YouTube).</li>
+                            <li><i class="fas fa-star text-orange-400"></i>Conducting advanced video SEO and content strategy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center animate-on-scroll mb-12">
+                    <h2 class="section-title"><span class="highlight-blue">Project</span> <span class="highlight-orange">Highlights</span></h2>
+                    <p class="section-subtitle">Selected projects showcasing the tapestry of my AI-driven creative work.</p>
+                </div>
+                <div class="text-center mb-8 animate-on-scroll delay-50" id="projectFilterControls">
+                    <button class="filter-btn neumorphic-outset active" data-filter="all">All</button>
+                    <button class="filter-btn neumorphic-outset" data-filter="video">AI Video</button>
+                    <button class="filter-btn neumorphic-outset" data-filter="image">AI Image</button>
+                    <button class="filter-btn neumorphic-outset" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn neumorphic-outset" data-filter="audio">AI Audio</button>
+                    <button class="filter-btn neumorphic-outset" data-filter="creative">Creative</button>
+                </div>
+            </div>
+            <div class="projects-outer-wrapper animate-on-scroll delay-100 relative">
+                <button id="scrollProjectsLeft" class="project-scroll-btn neumorphic-outset left hidden" aria-label="Scroll projects left"><i class="fas fa-chevron-left"></i></button>
+                <!-- =========== PROJECT CARDS RESTORED HERE =========== -->
+                <div class="horizontal-scroll-wrapper" id="projectScroller">
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal1" data-category="video marketing creative">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-marketing.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Marketing"></div>
+                        <div class="content"><h3>AI-Enhanced Marketing</h3><p class="text-sm text-gray-400">Multi-platform AI content campaign.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal3" data-category="video creative">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-film.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Film"></div>
+                        <div class="content"><h3>AI Video Generation Portfolio</h3><p class="text-sm text-gray-400">Narrative short films & AI video content.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal5" data-category="image creative">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-image.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Image"></div>
+                        <div class="content"><h3>AI Image Generation Showcase</h3><p class="text-sm text-gray-400">Stunning visuals with advanced AI.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal4" data-category="marketing">
+                         <div class="h-48 overflow-hidden"><img src="assets/images/project-linkedin-brand.jpg" class="w-full h-full object-cover" loading="lazy" alt="LinkedIn Branding"></div>
+                        <div class="content"><h3>LinkedIn Branding Overhaul</h3><p class="text-sm text-gray-400">Optimized profiles and AI content.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal2" data-category="creative">
+                         <div class="h-48 overflow-hidden"><img src="assets/images/project-data-viz.jpg" class="w-full h-full object-cover" loading="lazy" alt="Data Viz"></div>
+                        <div class="content"><h3>Interactive Data Viz</h3><p class="text-sm text-gray-400">Web-based P5.js interactive report.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal7" data-category="audio">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-audio.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Audio"></div>
+                        <div class="content"><h3>AI-Powered Audio Creations</h3><p class="text-sm text-gray-400">Voiceovers and custom music scores.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal8" data-category="video creative">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-lipsync.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Lip Sync"></div>
+                        <div class="content"><h3>Seamless AI Lip Sync</h3><p class="text-sm text-gray-400">High accuracy lip sync for AI avatars.</p></div>
+                    </div>
+                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal6" data-category="creative">
+                        <div class="h-48 overflow-hidden"><img src="assets/images/project-prompt-eng.jpg" class="w-full h-full object-cover" loading="lazy" alt="Prompt Engineering"></div>
+                        <div class="content"><h3>Mastering AI Prompts</h3><p class="text-sm text-gray-400">Deep dive into prompt engineering.</p></div>
+                    </div>
+                </div>
+                <!-- =================================================== -->
+                <button id="scrollProjectsRight" class="project-scroll-btn neumorphic-outset right" aria-label="Scroll projects right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center animate-on-scroll mb-12">
+                    <h2 class="section-title">Ignite Your <span class="highlight-blue">Next</span> <span class="highlight-orange">Project</span></h2>
+                    <p class="section-subtitle">Have an idea? Let's connect and create something brilliant.</p>
+                </div>
+                <div id="ideaIgniter" class="max-w-3xl mx-auto animate-on-scroll delay-100">
+                    <div class="mb-10 text-center">
+                        <h3 class="text-2xl font-semibold mb-6">What are you looking for?</h3>
+                        <div id="igniterNodesContainer" class="flex flex-wrap justify-center gap-4">
+                            <button class="igniter-node neumorphic-outset" data-need="AI Video">AI Video</button>
+                            <button class="igniter-node neumorphic-outset" data-need="AI Design">AI Design</button>
+                            <button class="igniter-node neumorphic-outset" data-need="AI Audio">AI Audio</button>
+                            <button class="igniter-node neumorphic-outset" data-need="Strategy">Strategy</button>
+                             <button class="igniter-node neumorphic-outset" data-need="Consulting">Consulting</button>
+                            <button class="igniter-node neumorphic-outset" data-need="Unique Challenge">Unique Challenge</button>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <!-- VISIBLE FORM FOR USERS -->
+<form id="contactForm" name="contact" method="POST" action="/thank-you/" data-netlify="true" data-netlify-honeypot="bot-field">
+    <!-- This hidden field is for spam prevention -->
+    <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+        <div>
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input neumorphic-inset" required autocomplete="name">
+        </div>
+        <div>
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" class="form-input neumorphic-inset" required autocomplete="email">
+        </div>
+    </div>
+    <div class="mt-8">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" id="subject" name="subject" class="form-input neumorphic-inset" required>
+    </div>
+    <div class="mt-8">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea id="message" name="message" rows="6" class="form-input neumorphic-inset" required></textarea>
+    </div>
+    <div class="text-center mt-10">
+        <button type="submit" class="hero-cta-btn neumorphic-outset">Send Message</button>
+    </div>
+</form>
+<!-- This message container is no longer needed as the user will be redirected -->
+<!-- <div id="formSubmissionMessage" class="mt-6 text-center font-semibold"></div> -->
+                        <div id="formSubmissionMessage" class="mt-6 text-center font-semibold"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center animate-on-scroll delay-200">
+                <p class="mb-6 text-lg">Or connect directly via:</p>
+                <div class="flex justify-center items-center space-x-6">
+<button id="callAgentButton" aria-label="Call AI Agent"
+        class="inline-flex items-center justify-center w-14 h-14 rounded-full neumorphic-outset text-gray-300 hover:text-red-400 transition-colors duration-300">
+    <i class="fas fa-phone-alt text-2xl"></i>
+</button>
+                    <a href="https://wa.me/923442001366" target="_blank" aria-label="Chat on WhatsApp" 
+                       class="inline-flex items-center justify-center w-14 h-14 rounded-full neumorphic-outset text-gray-300 hover:text-green-400 transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saifullah637008156" target="_blank" aria-label="Visit my LinkedIn profile"
+                       class="inline-flex items-center justify-center w-14 h-14 rounded-full neumorphic-outset text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center mt-12">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="currentYear">2024</span> Saif. AI Creative Artist. Made by Janoob.</p>
+        </div>
+    </footer>
+    
+    <!-- All modals are still required for the projects -->
+    <div id="modalsContainer">
+        <!-- Modal 1: AI Marketing -->
+        <div id="projectModal1" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>AI-Enhanced Marketing</h3>
+                <video controls width="700" height="380" preload="metadata" poster="assets/images/project-ai-marketing-poster-modal.jpg" loading="lazy" class="mb-4 rounded-md">
+                    <source src="assets/videos/project-ai-marketing-sample.mp4#t=0.1" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="modal-details-container">
+                    <a href="project_ai_marketing_details.html" class="btn btn-secondary-outline w-full mb-4">View Full Project</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-magic"></i> Midjourney</span>
+                        <span class="modal-tool-button"><i class="fas fa-film"></i> Runway</span>
+                        <span class="modal-tool-button"><i class="fas fa-video"></i> Pika Labs</span>
+                        <span class="modal-tool-button"><i class="fas fa-microphone-alt"></i> ElevenLabs</span>
+                        <span class="modal-tool-button"><i class="fas fa-user-tie"></i> HeyGen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 2: Data Viz -->
+        <div id="projectModal2" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>Interactive Data Viz</h3>
+                <img src="assets/images/project-data-viz-modal.jpg" loading="lazy" alt="Data Viz" class="mb-4 rounded-md">
+                <div class="modal-details-container">
+                    <a href="project_interactive_data_viz_details.html" class="btn btn-secondary-outline w-full mb-4">View Full Project</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fab fa-js-square"></i> P5.js</span>
+                        <span class="modal-tool-button"><i class="fas fa-database"></i> Data APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3: AI Film -->
+        <div id="projectModal3" class="modal">
+             <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>AI Video Generation Portfolio</h3>
+                <video controls width="700" height="380" preload="metadata" poster="assets/images/project-ai-film-poster-modal.jpg" loading="lazy" class="mb-4 rounded-md">
+                    <source src="assets/videos/ai-short-film-sample.mp4#t=0.1" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="modal-details-container">
+                    <a href="project_ai_video_portfolio_details.html" class="btn btn-secondary-outline w-full mb-4">View Details</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-film"></i> Runway</span>
+                        <span class="modal-tool-button"><i class="fas fa-video"></i> Pika Labs</span>
+                        <span class="modal-tool-button"><i class="fas fa-video"></i> VEO3</span>
+                        <span class="modal-tool-button"><i class="fas fa-infinity"></i> Kling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4: LinkedIn Branding -->
+        <div id="projectModal4" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>LinkedIn Branding Overhaul</h3>
+                <img src="assets/images/project-linkedin-brand-modal.jpg" loading="lazy" alt="LinkedIn Branding" class="mb-4 rounded-md">
+                <div class="modal-details-container">
+                    <a href="project_linkedin_branding_details.html" class="btn btn-secondary-outline w-full mb-4">View Full Project</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fab fa-linkedin"></i> LinkedIn</span>
+                        <span class="modal-tool-button"><i class="fas fa-magic"></i> Midjourney</span>
+                        <span class="modal-tool-button"><i class="fas fa-robot"></i> ChatGPT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5: AI Image Showcase -->
+        <div id="projectModal5" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>AI Image Generation Showcase</h3>
+                <img src="assets/images/project-ai-image-modal.jpg" loading="lazy" alt="AI Image" class="mb-4 rounded-md">
+                <div class="modal-details-container">
+                    <a href="project_ai_image_gallery_details.html" class="btn btn-secondary-outline w-full mb-4">View Gallery</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-magic"></i> Midjourney</span>
+                        <span class="modal-tool-button"><i class="fas fa-palette"></i> DALL-E 3</span>
+                        <span class="modal-tool-button"><i class="fas fa-fire"></i> Magnific AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 6: Prompt Engineering -->
+        <div id="projectModal6" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>Mastering AI Prompts</h3>
+                <img src="assets/images/project-prompt-eng-modal.jpg" loading="lazy" alt="Prompt Engineering" class="mb-4 rounded-md">
+                <div class="modal-details-container">
+                    <a href="project_ai_prompts_details.html" class="btn btn-secondary-outline w-full mb-4">View Case Study</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-robot"></i> ChatGPT</span>
+                        <span class="modal-tool-button"><i class="fas fa-film"></i> Video AI</span>
+                        <span class="modal-tool-button"><i class="fas fa-magic"></i> Image AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 7: AI Audio -->
+        <div id="projectModal7" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>AI-Powered Audio Creations</h3>
+                <video controls width="700" height="380" preload="metadata" poster="assets/images/project-ai-audio-poster-modal.jpg" loading="lazy" class="mb-4 rounded-md">
+                    <source src="assets/videos/project-ai-audio-sample.mp4#t=0.1" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="modal-details-container">
+                    <a href="project_ai_audio_solutions_details.html" class="btn btn-secondary-outline w-full mb-4">Listen to Samples</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-microphone-alt"></i> ElevenLabs</span>
+                        <span class="modal-tool-button"><i class="fas fa-music"></i> Suno AI</span>
+                        <span class="modal-tool-button"><i class="fas fa-wave-square"></i> Adobe Audition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 8: AI Lip Sync -->
+        <div id="projectModal8" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" data-modal-close aria-label="Close modal">&times;</span>
+                <h3>Seamless AI Lip Sync</h3>
+                <video controls width="700" height="380" preload="metadata" poster="assets/images/project-ai-lipsync-poster-modal.jpg" loading="lazy" class="mb-4 rounded-md">
+                    <source src="assets/videos/project-ai-lipsync-sample.mp4#t=0.1" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="modal-details-container">
+                    <a href="project_ai_lipsync_details.html" class="btn btn-secondary-outline w-full mb-4">Watch Demo</a>
+                    <h5 class="modal-tools-title">Key Tools:</h5>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="modal-tool-button"><i class="fas fa-user-tie"></i> HeyGen</span>
+                        <span class="modal-tool-button"><i class="fas fa-video"></i> Runway</span>
+                        <span class="modal-tool-button"><i class="fas fa-microphone-alt"></i> ElevenLabs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+<script type="text/javascript" src="https://sdk.twilio.com/js/client/v1.13/twilio.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const callButton = document.getElementById('callAgentButton');
+    let device;
+
+    async function setupDevice() {
+      try {
+        // Fetch a secure token from our Netlify function
+        const response = await fetch('/.netlify/functions/twilio-token');
+        const data = await response.json();
+
+        console.log("Twilio token received.");
+        device = new Twilio.Device(data.token, {
+            codecPreferences: ['opus', 'pcmu'] // Helps with audio quality
+        });
+
+        device.on('ready', function() {
+          console.log("Twilio.Device is ready to make a call.");
+          callButton.disabled = false;
+        });
+
+        device.on('error', function(error) {
+          console.error("Twilio.Device Error: ", error.message);
+        });
+
+      } catch (error) {
+        console.error("Could not set up Twilio Device: ", error);
+      }
+    }
+
+    callButton.onclick = function() {
+      if (device) {
+        console.log('Placing call...');
+        device.connect();
+      } else {
+        console.error("Twilio device not set up.");
+      }
+    };
+
+    // Disable button until device is ready
+    callButton.disabled = true;
+    setupDevice();
+  });
+</script>
+</body>
+</html>
