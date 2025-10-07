@@ -2,25 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dental Practice FAQ</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
-        h1, h2 { color: #333; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Saif's Portfolio</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
 </head>
-<body>
-    <h1>Frequently Asked Questions</h1>
+<body class="bg-gray-900 text-white">
 
-    <h2>What are your office hours?</h2>
-    <p>Our office is open from 9:00 AM to 5:00 PM, Monday through Friday. We are closed on weekends and public holidays.</p>
+    <header class="bg-gray-800 p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white">Saif's Portfolio</a>
+            <a href="index.html" class="text-white hover:text-gray-300">Go Back</a>
+        </nav>
+    </header>
 
-    <h2>What insurance plans do you accept?</h2>
-    <p>We accept a wide range of insurance plans, including from major providers like Cigna, Delta Dental, and MetLife. Please call our office with your specific plan details to confirm coverage.</p>
+    <main class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
 
-    <h2>Is there parking available?</h2>
-    <p>Yes, there is free patient parking available in the lot directly behind our building.</p>
+        <div class="space-y-4">
+            <div class="faq-item">
+                <button class="faq-question w-full text-left text-2xl font-semibold p-4 bg-gray-800 rounded-lg focus:outline-none">
+                    What services do you offer?
+                </button>
+                <div class="faq-answer p-4 bg-gray-700 rounded-lg hidden">
+                    <p>I offer a range of AI-driven creative services, including video production, image design, and audio solutions. I also specialize in prompt engineering and digital marketing strategy.</p>
+                </div>
+            </div>
 
-    <h2>What is your cancellation policy?</h2>
-    <p>We require at least 24 hours' notice for any appointment cancellations. A fee may be charged for late cancellations or no-shows.</p>
+            <div class="faq-item">
+                <button class="faq-question w-full text-left text-2xl font-semibold p-4 bg-gray-800 rounded-lg focus:outline-none">
+                    How can I see your work?
+                </button>
+                <div class="faq-answer p-4 bg-gray-700 rounded-lg hidden">
+                    <p>You can explore my projects on the <a href="index.html#projects" class="text-blue-400 hover:underline">main page</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question w-full text-left text-2xl font-semibold p-4 bg-gray-800 rounded-lg focus:outline-none">
+                    How do I get in touch?
+                </button>
+                <div class="faq-answer p-4 bg-gray-700 rounded-lg hidden">
+                    <p>You can contact me through the <a href="index.html#contact" class="text-blue-400 hover:underline">contact form</a> on the main page, or connect with me on WhatsApp or LinkedIn.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="faq.js"></script>
 </body>
 </html>

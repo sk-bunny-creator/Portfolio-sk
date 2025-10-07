@@ -1,0 +1,20 @@
+.faq-item {
+    border-bottom: 1px solid #4a5568;
+}
+
+.faq-question {
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #2d3748;
+}
+
+.faq-answer {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 200px;
+}
