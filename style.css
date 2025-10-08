@@ -475,19 +475,10 @@ footer { border-top: 1px solid var(--shadow-dark); }
     opacity: 0.3;
 }
 
-.process-card {
-    background-color: var(--neumorphic-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: inset -6px -6px 12px var(--shadow-light), inset 6px 6px 12px var(--shadow-dark);
-    transition: transform 0.3s ease;
-    height: 100%;
+.prose {
+    color: var(--text-secondary);
 }
 
-.process-card:hover {
-    transform: translateY(-5px);
-}
-
-.process-card h3 {
-    font-family: var(--font-heading);
+.prose h2 {
+    color: var(--text-primary);
 }
