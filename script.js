@@ -221,4 +221,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentYearEl) {
          currentYearEl.textContent = new Date().getFullYear();
     }
+
+    // --- STORYBOOK PARALLAX MOTIFS ---
+    const horseMotif = document.getElementById('horse-motif');
+    const lilyMotif = document.getElementById('lily-motif');
+
+    function handleStorybookScroll() {
+        if (!horseMotif || !lilyMotif) return;
+
+        const storybookSection = document.getElementById('storybook-start');
+        if (!storybookSection) return;
+
+        const rect = storybookSection.getBoundingClientRect();
+        const scrollY = window.scrollY;
+
+        // Check if the section is in the viewport
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            const speed = 0.1;
+            const offset = (scrollY - storybookSection.offsetTop) * speed;
+
+            horseMotif.style.transform = `translateY(${offset}px)`;
+            lilyMotif.style.transform = `translateY(${-offset}px)`;
+        }
+    }
+
+    window.addEventListener('scroll', handleStorybookScroll, { passive: true });
+
 });
