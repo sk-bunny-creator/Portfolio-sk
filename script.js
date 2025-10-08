@@ -322,4 +322,12 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.toggle('flipped');
         });
     });
+
+    // --- PROCESS CARD FLIPPING ---
+    const processCards = document.querySelectorAll('.process-card-container');
+    processCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
 });

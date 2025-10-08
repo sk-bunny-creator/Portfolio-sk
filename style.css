@@ -73,7 +73,7 @@ header#mainHeader {
     width: calc(100% - 32px);
     z-index: 50;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    background-color: var(--header-bg-initial);
+    background-color: transparent; /* Initially transparent */
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 1rem;
@@ -82,7 +82,7 @@ header#mainHeader {
 }
 header#mainHeader.header-scrolled-full {
     border-radius: 0; top: 0; left: 0; right: 0; width: 100%;
-    background-color: var(--header-bg-scrolled);
+    background-color: rgba(30, 32, 36, 0.85); /* Semi-opaque background on scroll */
 }
 header#mainHeader .header-content-wrapper {
     display: flex; justify-content: space-between; align-items: center;
@@ -94,9 +94,13 @@ header#mainHeader .header-content-wrapper {
     font-weight: 700;
     color: var(--accent-blue);
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.saif-logo:hover {
+    transform: scale(1.05);
 }
 .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased font size */
     font-weight: 500;
     text-decoration: none;
     color: var(--text-secondary);
@@ -566,6 +570,54 @@ footer { border-top: 1px solid var(--shadow-dark); }
 
 .process-card h3 {
     font-family: var(--font-heading);
+}
+
+/* --- Flipping Card Styles for Creative Process --- */
+.process-card-container {
+    background-color: transparent;
+    min-height: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.process-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.process-card-container.flipped .process-card-inner {
+    transform: rotateY(180deg);
+}
+
+.process-card-front, .process-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.process-card-front {
+    background: linear-gradient(145deg, #282a30, #212227);
+    box-shadow: -8px -8px 16px var(--shadow-light), 8px 8px 16px var(--shadow-dark);
+}
+
+.process-card-back {
+    background-color: var(--neumorphic-bg);
+    box-shadow: inset -8px -8px 16px var(--shadow-light), inset 8px 8px 16px var(--shadow-dark);
+    transform: rotateY(180deg);
+    align-items: flex-start;
+}
 .prose {
     color: var(--text-secondary);
 }
