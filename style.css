@@ -566,4 +566,10 @@ footer { border-top: 1px solid var(--shadow-dark); }
 
 .process-card h3 {
     font-family: var(--font-heading);
+.prose {
+    color: var(--text-secondary);
+}
+
+.prose h2 {
+    color: var(--text-primary);
 }
