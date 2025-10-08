@@ -56,12 +56,12 @@
             <div class="container mx-auto px-6 w-full z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left animate-on-scroll">
-                        <h1 id="heroHeadline" class="text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">Saifullah<br><span class='hero-ai'>AI</span> <span class='hero-creative'>Creative</span> <span class='hero-artist'>Artist</span></h1>
+                        <h1 id="heroHeadline" class="text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">The Digital Diary of an<br><span class='hero-ai'>AI</span> <span class='hero-creative'>Creative</span> <span class='hero-artist'>Artist</span></h1>
                         <p class="text-lg md:text-xl mb-8 font-normal">
-                            As a specialist in generative AI, I use cutting-edge tools to transform your concepts into captivating videos, designs, and audio. I engineer strategic AI workflows that deliver high-impact, professional content to make your brand stand out.
+                            A journey through the intersection of art and technology. This is my story, told through code, pixels, and prompts.
                         </p>
                         <div class="space-y-4 md:space-y-0 md:space-x-4 animate-on-scroll delay-500 flex flex-col sm:flex-row justify-center md:justify-start">
-                            <a href="#projects" class="hero-cta-btn neumorphic-outset">Explore My Work</a>
+                            <a href="#storybook-start" class="hero-cta-btn neumorphic-outset">Begin the Journey</a>
                             <a href="#contact" class="hero-cta-btn neumorphic-outset">Let's Collaborate</a>
                         </div>
                     </div>
@@ -74,6 +74,49 @@
             </div>
         </section>
 
+        <section id="storybook-start" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">My Creative Process</h2>
+                <p class="section-subtitle">This is a story of how I bring ideas to life, from a simple spark to a finished product.</p>
+                <div class="mt-12 relative">
+                    <div class="absolute top-0 left-0 w-full h-full">
+                        <div id="horse-motif" class="absolute bottom-0 left-0"></div>
+                    </div>
+                    <div class="w-full max-w-5xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 items-center relative">
+                            <svg id="arrow-svg-canvas" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></svg>
+                            <!-- Step 1: Ideation -->
+                            <div class="process-card text-center md:text-left z-10">
+                                <h3 class="text-2xl font-bold text-primary-orange mb-3">01. Ideation</h3>
+                                <p class="text-text-secondary">We start by understanding your core message. I use AI to rapidly brainstorm concepts, ensuring we find the most realistic and believable narrative to achieve your goal.</p>
+                            </div>
+
+                            <!-- Step 2: Scripting -->
+                             <div class="process-card text-center md:text-right z-10">
+                                <h3 class="text-2xl font-bold text-primary-blue mb-3">02. Scripting</h3>
+                                <p class="text-text-secondary">With a clear idea, I leverage AI to draft and refine scripts at an accelerated pace, focusing on dialogue and pacing that feels authentic and engaging.</p>
+                            </div>
+
+                            <!-- Step 3: Mood Board -->
+                            <div class="process-card text-center md:text-left z-10">
+                                <h3 class="text-2xl font-bold text-primary-orange mb-3">03. Mood Board</h3>
+                                <p class="text-text-secondary">I generate a complete visual identity for the project—characters, environments, and color palettes—ensuring the aesthetic aligns perfectly with the script before production begins.</p>
+                            </div>
+
+                            <!-- Step 4: Production -->
+                             <div class="process-card text-center md:text-right z-10">
+                                <h3 class="text-2xl font-bold text-primary-blue mb-3">04. Production</h3>
+                                <p class="text-text-secondary">This is where it all comes together. Using a suite of AI tools, I produce the final content efficiently, delivering a high-quality, believable result that's both fast and economical.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 right-0 w-full h-full">
+                         <div id="lily-motif" class="absolute top-0 right-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="skills" class="py-20 md:py-28">
             <div class="container mx-auto px-6">
                  <div class="text-center animate-on-scroll mb-12">
@@ -81,56 +124,104 @@
                     <p class="section-subtitle">A diverse toolkit to bring your creative and marketing visions to life, detailed below.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="skill-card animate-on-scroll">
-                        <h3 class="skill-card-title"><i class="fas fa-film"></i><span>AI Video Production</span></h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Crafting engaging short films and viral content with generative AI.</li>
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Integrating custom or cloned AI avatars into marketing videos.</li>
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Automating short clip creation from long-form content.</li>
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Animating static images to mimic real-world motion.</li>
-                        </ul>
+                    <!-- AI Video Production Card -->
+                    <div class="skill-card-container animate-on-scroll">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-film"></i><span>AI Video Production</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Engaging short films & viral content.</li>
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Custom AI avatars in marketing videos.</li>
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Automated clip creation.</li>
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Animating static images.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card animate-on-scroll delay-100">
-                        <h3 class="skill-card-title"><i class="fas fa-palette"></i><span>AI Image & Design</span></h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-star text-orange-400"></i>Transforming concepts into unique visuals with Midjourney, DALL-E, etc.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Creating AI-powered branding assets like logos and banners.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Advanced image editing: object removal/addition, style changes.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Designing interactive web elements and concept art.</li>
-                        </ul>
+                    <!-- AI Image & Design Card -->
+                    <div class="skill-card-container animate-on-scroll delay-100">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-palette"></i><span>AI Image & Design</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                    <li><i class="fas fa-star text-orange-400"></i>Unique visuals with Midjourney, DALL-E.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>AI-powered branding assets.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Advanced image editing.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Interactive web elements & concept art.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card animate-on-scroll delay-200">
-                        <h3 class="skill-card-title"><i class="fas fa-volume-up"></i><span>AI Audio Solutions</span></h3>
-                        <ul class="skill-list">
-                           <li><i class="fas fa-check-circle text-blue-400"></i>Generating realistic voices from text or cloning existing voices.</li>
-                           <li><i class="fas fa-check-circle text-blue-400"></i>Creating custom music and unique sound effects.</li>
-                           <li><i class="fas fa-check-circle text-blue-400"></i>Enhancing audio quality through de-noising and fine-tuning.</li>
-                        </ul>
+                    <!-- AI Audio Solutions Card -->
+                    <div class="skill-card-container animate-on-scroll delay-200">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-volume-up"></i><span>AI Audio Solutions</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                   <li><i class="fas fa-check-circle text-blue-400"></i>Realistic voice generation & cloning.</li>
+                                   <li><i class="fas fa-check-circle text-blue-400"></i>Custom music and sound effects.</li>
+                                   <li><i class="fas fa-check-circle text-blue-400"></i>Audio enhancement and de-noising.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card animate-on-scroll delay-300">
-                        <h3 class="skill-card-title"><i class="fas fa-lightbulb"></i><span>Prompt Engineering</span></h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-star text-orange-400"></i>Crafting sophisticated prompts for VEO3, Kling, Runway, etc.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Utilizing multi-modal inputs for highly specific results.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Guiding clients through iterative refinement processes.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Developing custom prompt libraries (e.g., small GPTs).</li>
-                        </ul>
+                    <!-- Prompt Engineering Card -->
+                    <div class="skill-card-container animate-on-scroll delay-300">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-lightbulb"></i><span>Prompt Engineering</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                    <li><i class="fas fa-star text-orange-400"></i>Prompts for VEO3, Kling, Runway, etc.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Multi-modal inputs for specific results.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Iterative refinement processes.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Custom prompt libraries (small GPTs).</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card animate-on-scroll delay-400">
-                        <h3 class="skill-card-title"><i class="fas fa-project-diagram"></i><span>AI Workflow Optimization</span></h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Consulting on efficient AI-driven content pipelines.</li>
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Automating repetitive creative tasks to boost productivity.</li>
-                            <li><i class="fas fa-check-circle text-blue-400"></i>Advising on AI tools to streamline client communication.</li>
-                        </ul>
+                    <!-- AI Workflow Optimization Card -->
+                    <div class="skill-card-container animate-on-scroll delay-400">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-project-diagram"></i><span>AI Workflow Optimization</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>AI-driven content pipeline consulting.</li>
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Automating repetitive creative tasks.</li>
+                                    <li><i class="fas fa-check-circle text-blue-400"></i>Advising on AI tools for communication.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card animate-on-scroll delay-500">
-                        <h3 class="skill-card-title"><i class="fas fa-chart-line"></i><span>Digital Marketing & Strategy</span></h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-star text-orange-400"></i>Creating compelling AI-powered commercial ads.</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Managing and optimizing social media presence (TikTok, YouTube).</li>
-                            <li><i class="fas fa-star text-orange-400"></i>Conducting advanced video SEO and content strategy.</li>
-                        </ul>
+                    <!-- Digital Marketing & Strategy Card -->
+                    <div class="skill-card-container animate-on-scroll delay-500">
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <h3 class="skill-card-title"><i class="fas fa-chart-line"></i><span>Digital Marketing & Strategy</span></h3>
+                                <p class="flip-indicator">Click to see details</p>
+                            </div>
+                            <div class="skill-card-back">
+                                <ul class="skill-list">
+                                    <li><i class="fas fa-star text-orange-400"></i>Compelling AI-powered commercial ads.</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Social media management (TikTok, YouTube).</li>
+                                    <li><i class="fas fa-star text-orange-400"></i>Advanced video SEO & content strategy.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,35 +247,35 @@
                 <!-- =========== PROJECT CARDS RESTORED HERE =========== -->
                 <div class="horizontal-scroll-wrapper" id="projectScroller">
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal1" data-category="video marketing creative">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-marketing.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Marketing"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-marketing.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Marketing"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Enhanced Marketing</h3><p class="text-sm text-gray-400">Multi-platform AI content campaign.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal3" data-category="video creative">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-film.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Film"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-film.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Film"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Video Generation Portfolio</h3><p class="text-sm text-gray-400">Narrative short films & AI video content.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal5" data-category="image creative">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-image.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Image"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-image.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Image"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Image Generation Showcase</h3><p class="text-sm text-gray-400">Stunning visuals with advanced AI.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal4" data-category="marketing">
-                         <div class="h-48 overflow-hidden"><img src="assets/images/project-linkedin-brand.jpg" class="w-full h-full object-cover" loading="lazy" alt="LinkedIn Branding"></div>
+                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-linkedin-brand.jpg" class="w-full h-full object-cover" loading="lazy" alt="LinkedIn Branding"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>LinkedIn Branding Overhaul</h3><p class="text-sm text-gray-400">Optimized profiles and AI content.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal2" data-category="creative">
-                         <div class="h-48 overflow-hidden"><img src="assets/images/project-data-viz.jpg" class="w-full h-full object-cover" loading="lazy" alt="Data Viz"></div>
+                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-data-viz.jpg" class="w-full h-full object-cover" loading="lazy" alt="Data Viz"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Interactive Data Viz</h3><p class="text-sm text-gray-400">Web-based P5.js interactive report.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal7" data-category="audio">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-audio.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Audio"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-audio.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Audio"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Powered Audio Creations</h3><p class="text-sm text-gray-400">Voiceovers and custom music scores.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal8" data-category="video creative">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-ai-lipsync.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Lip Sync"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-lipsync.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Lip Sync"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Seamless AI Lip Sync</h3><p class="text-sm text-gray-400">High accuracy lip sync for AI avatars.</p></div>
                     </div>
                     <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal6" data-category="creative">
-                        <div class="h-48 overflow-hidden"><img src="assets/images/project-prompt-eng.jpg" class="w-full h-full object-cover" loading="lazy" alt="Prompt Engineering"></div>
+                        <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-prompt-eng.jpg" class="w-full h-full object-cover" loading="lazy" alt="Prompt Engineering"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Mastering AI Prompts</h3><p class="text-sm text-gray-400">Deep dive into prompt engineering.</p></div>
                     </div>
                 </div>
