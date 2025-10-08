@@ -221,4 +221,97 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentYearEl) {
          currentYearEl.textContent = new Date().getFullYear();
     }
+
+    // --- STORYBOOK PARALLAX MOTIFS ---
+    const horseMotif = document.getElementById('horse-motif');
+    const lilyMotif = document.getElementById('lily-motif');
+
+    function handleStorybookScroll() {
+        if (!horseMotif || !lilyMotif) return;
+
+        const storybookSection = document.getElementById('storybook-start');
+        if (!storybookSection) return;
+
+        const rect = storybookSection.getBoundingClientRect();
+        const scrollY = window.scrollY;
+
+        // Check if the section is in the viewport
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            const speed = 0.1;
+            const offset = (scrollY - storybookSection.offsetTop) * speed;
+
+            horseMotif.style.transform = `translateY(${offset}px)`;
+            lilyMotif.style.transform = `translateY(${-offset}px)`;
+        }
+    }
+
+    window.addEventListener('scroll', handleStorybookScroll, { passive: true });
+
+    // --- STORYBOOK PROCESS CARD SEQUENTIAL ANIMATION ---
+    const processContainer = document.querySelector('#storybook-start .grid');
+    if (processContainer) {
+        const elementsToAnimate = processContainer.querySelectorAll('.process-card'); // Animate cards only now
+
+        const processObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    elementsToAnimate.forEach((el, index) => {
+                        setTimeout(() => {
+                            el.classList.add('animated');
+                        }, index * 250); // Stagger the animation by 250ms
+                    });
+                    drawArrowLines(); // Draw arrows after cards are animated
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, { threshold: 0.2, rootMargin: '0px' });
+
+        elementsToAnimate.forEach(el => el.classList.add('animate-on-scroll'));
+        processObserver.observe(processContainer);
+    }
+
+    // --- SVG ARROW DRAWING ---
+    const svgCanvas = document.getElementById('arrow-svg-canvas');
+    const cards = document.querySelectorAll('#storybook-start .process-card');
+
+    function drawArrowLines() {
+        if (!svgCanvas || cards.length < 2) return;
+
+        // Clear any existing lines
+        svgCanvas.innerHTML = '';
+
+        const containerRect = processContainer.getBoundingClientRect();
+
+        for (let i = 0; i < cards.length - 1; i++) {
+            const startCard = cards[i];
+            const endCard = cards[i+1];
+
+            const startRect = startCard.getBoundingClientRect();
+            const endRect = endCard.getBoundingClientRect();
+
+            // Calculate center points relative to the container
+            const startX = startRect.left + startRect.width / 2 - containerRect.left;
+            const startY = startRect.top + startRect.height / 2 - containerRect.top;
+            const endX = endRect.left + endRect.width / 2 - containerRect.left;
+            const endY = endRect.top + endRect.height / 2 - containerRect.top;
+
+            // Create a path element
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', `M${startX},${startY} C${startX},${(startY+endY)/2} ${endX},${(startY+endY)/2} ${endX},${endY}`);
+            path.setAttribute('stroke', 'var(--accent-orange)');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke-dasharray', '5, 5');
+            path.style.opacity = '0.7';
+
+            svgCanvas.appendChild(path);
+        }
+    }
+
+    // Redraw arrows on window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(drawArrowLines, 100);
+    }, { passive: true });
 });

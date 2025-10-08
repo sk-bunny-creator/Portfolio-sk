@@ -447,3 +447,47 @@ footer { border-top: 1px solid var(--shadow-dark); }
     background-color: var(--shadow-light);
     border-color: rgba(255, 255, 255, 0.2);
 }
+
+/* --- STORYBOOK SECTION --- */
+#storybook-start {
+    background: linear-gradient(145deg, #2a2c31, #222428);
+    border-radius: 1rem;
+    box-shadow: -12px -12px 24px var(--shadow-light), 12px 12px 24px var(--shadow-dark);
+    padding: 3rem 1.5rem;
+    margin: 0 1rem; /* Add some margin to not touch the edges */
+}
+
+#horse-motif {
+    width: 200px;
+    height: 200px;
+    background-image: url('assets/images/horse.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+}
+
+#lily-motif {
+    width: 200px;
+    height: 200px;
+    background-image: url('assets/images/lily.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+}
+
+.process-card {
+    background-color: var(--neumorphic-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: inset -6px -6px 12px var(--shadow-light), inset 6px 6px 12px var(--shadow-dark);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+}
+
+.process-card h3 {
+    font-family: var(--font-heading);
+}
