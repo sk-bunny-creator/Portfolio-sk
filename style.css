@@ -45,7 +45,6 @@
     box-shadow: inset -8px -8px 16px var(--shadow-light), inset 8px 8px 16px var(--shadow-dark);
 }
 .neumorphic-outset:active,
-.filter-btn.active,
 .hero-cta-btn:active,
 .igniter-node.active {
     border-radius: 1rem;
@@ -73,7 +72,7 @@ header#mainHeader {
     width: calc(100% - 32px);
     z-index: 50;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    background-color: var(--header-bg-initial);
+    background-color: transparent; /* Initially transparent */
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 1rem;
@@ -82,7 +81,7 @@ header#mainHeader {
 }
 header#mainHeader.header-scrolled-full {
     border-radius: 0; top: 0; left: 0; right: 0; width: 100%;
-    background-color: var(--header-bg-scrolled);
+    background-color: rgba(30, 32, 36, 0.85); /* Semi-opaque background on scroll */
 }
 header#mainHeader .header-content-wrapper {
     display: flex; justify-content: space-between; align-items: center;
@@ -94,9 +93,13 @@ header#mainHeader .header-content-wrapper {
     font-weight: 700;
     color: var(--accent-blue);
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.saif-logo:hover {
+    transform: scale(1.05);
 }
 .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased font size */
     font-weight: 500;
     text-decoration: none;
     color: var(--text-secondary);
@@ -245,67 +248,50 @@ header#mainHeader .header-content-wrapper {
 
 /* --- PROJECTS SECTION --- */
 #projectFilterControls .filter-btn {
-    padding: 0.5rem 1.25rem; margin: 0 0.3rem 0.5rem;
-    font-weight: 600; font-size: 0.9rem;
-    color: var(--text-secondary); border: none; cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    margin: 0 0.3rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-#projectFilterControls .filter-btn:hover { color: var(--text-primary); }
-#projectFilterControls .filter-btn.active { color: var(--accent-blue); }
 
-.projects-outer-wrapper {
-    overflow: hidden; /* Hide scrollbar from the main wrapper */
+#projectFilterControls .filter-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
 }
-.horizontal-scroll-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    padding-bottom: 1.5rem; /* Space for scrollbar */
-    margin-bottom: -1.5rem; /* Hide scrollbar visually */
-    gap: 1.5rem;
+
+#projectFilterControls .filter-btn.active {
+    color: var(--text-primary);
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
 }
+
 .project-card-kinetic {
-    flex: 0 0 340px; /* Don't grow, don't shrink, base width 340px */
-    scroll-snap-align: start;
-    overflow: hidden; cursor: pointer;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    background-color: #2a2c31;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-@media (max-width: 767px) {
-    .project-card-kinetic {
-        flex-basis: 80%; /* Cards take up 80% of mobile screen width */
-    }
+
+.project-card-kinetic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+
 .project-card-kinetic.hidden-card {
-    opacity: 0;
-    transform: scale(0.8);
-    flex-basis: 0;
-    width: 0;
-    margin-right: 0;
-    padding: 0;
-    pointer-events: none;
-    gap: 0;
+    display: none;
 }
+
 .project-card-kinetic .content { padding: 1.5rem; }
 .project-card-kinetic h3 { color: var(--text-primary); }
-.project-scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.project-scroll-btn.left { left: -10px; }
-.project-scroll-btn.right { right: -10px; }
-@media (min-width: 1280px) { /* Adjust based on container width */
-    .project-scroll-btn.left { left: 20px; }
-    .project-scroll-btn.right { right: 20px; }
-}
 
 .project-image-container img {
     transition: filter 0.3s ease;
@@ -335,11 +321,15 @@ header#mainHeader .header-content-wrapper {
 
 .view-project-btn {
     padding: 0.75rem 1.5rem;
-    background: var(--neumorphic-bg);
+    background: var(--accent-blue);
     border-radius: 0.5rem;
     color: var(--text-primary);
     font-weight: 600;
-    box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+.view-project-btn:hover {
+    background: var(--accent-orange);
 }
 
 
@@ -566,6 +556,54 @@ footer { border-top: 1px solid var(--shadow-dark); }
 
 .process-card h3 {
     font-family: var(--font-heading);
+}
+
+/* --- Flipping Card Styles for Creative Process --- */
+.process-card-container {
+    background-color: transparent;
+    min-height: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.process-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.process-card-container.flipped .process-card-inner {
+    transform: rotateY(180deg);
+}
+
+.process-card-front, .process-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.process-card-front {
+    background: linear-gradient(145deg, #282a30, #212227);
+    box-shadow: -8px -8px 16px var(--shadow-light), 8px 8px 16px var(--shadow-dark);
+}
+
+.process-card-back {
+    background-color: var(--neumorphic-bg);
+    box-shadow: inset -8px -8px 16px var(--shadow-light), inset 8px 8px 16px var(--shadow-dark);
+    transform: rotateY(180deg);
+    align-items: flex-start;
+}
 .prose {
     color: var(--text-secondary);
 }

@@ -86,27 +86,55 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 items-center relative">
                             <svg id="arrow-svg-canvas" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></svg>
                             <!-- Step 1: Ideation -->
-                            <div class="process-card text-center md:text-left z-10">
-                                <h3 class="text-2xl font-bold text-primary-orange mb-3">01. Ideation</h3>
-                                <p class="text-text-secondary">We start by understanding your core message. I use AI to rapidly brainstorm concepts, ensuring we find the most realistic and believable narrative to achieve your goal.</p>
+                            <div class="process-card-container z-10">
+                                <div class="process-card-inner">
+                                    <div class="process-card-front">
+                                        <h3 class="text-2xl font-bold text-primary-orange mb-3">01. Ideation</h3>
+                                        <p class="flip-indicator">Click to see details</p>
+                                    </div>
+                                    <div class="process-card-back">
+                                        <p class="text-text-secondary">We start by understanding your core message. I use AI to rapidly brainstorm concepts, ensuring we find the most realistic and believable narrative to achieve your goal.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Step 2: Scripting -->
-                             <div class="process-card text-center md:text-right z-10">
-                                <h3 class="text-2xl font-bold text-primary-blue mb-3">02. Scripting</h3>
-                                <p class="text-text-secondary">With a clear idea, I leverage AI to draft and refine scripts at an accelerated pace, focusing on dialogue and pacing that feels authentic and engaging.</p>
+                            <div class="process-card-container z-10">
+                                <div class="process-card-inner">
+                                    <div class="process-card-front">
+                                        <h3 class="text-2xl font-bold text-primary-blue mb-3">02. Scripting</h3>
+                                        <p class="flip-indicator">Click to see details</p>
+                                    </div>
+                                    <div class="process-card-back">
+                                        <p class="text-text-secondary">With a clear idea, I leverage AI to draft and refine scripts at an accelerated pace, focusing on dialogue and pacing that feels authentic and engaging.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Step 3: Mood Board -->
-                            <div class="process-card text-center md:text-left z-10">
-                                <h3 class="text-2xl font-bold text-primary-orange mb-3">03. Mood Board</h3>
-                                <p class="text-text-secondary">I generate a complete visual identity for the project—characters, environments, and color palettes—ensuring the aesthetic aligns perfectly with the script before production begins.</p>
+                            <div class="process-card-container z-10">
+                                <div class="process-card-inner">
+                                    <div class="process-card-front">
+                                        <h3 class="text-2xl font-bold text-primary-orange mb-3">03. Mood Board</h3>
+                                        <p class="flip-indicator">Click to see details</p>
+                                    </div>
+                                    <div class="process-card-back">
+                                        <p class="text-text-secondary">I generate a complete visual identity for the project—characters, environments, and color palettes—ensuring the aesthetic aligns perfectly with the script before production begins.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Step 4: Production -->
-                             <div class="process-card text-center md:text-right z-10">
-                                <h3 class="text-2xl font-bold text-primary-blue mb-3">04. Production</h3>
-                                <p class="text-text-secondary">This is where it all comes together. Using a suite of AI tools, I produce the final content efficiently, delivering a high-quality, believable result that's both fast and economical.</p>
+                            <div class="process-card-container z-10">
+                                <div class="process-card-inner">
+                                    <div class="process-card-front">
+                                        <h3 class="text-2xl font-bold text-primary-blue mb-3">04. Production</h3>
+                                        <p class="flip-indicator">Click to see details</p>
+                                    </div>
+                                    <div class="process-card-back">
+                                        <p class="text-text-secondary">This is where it all comes together. Using a suite of AI tools, I produce the final content efficiently, delivering a high-quality, believable result that's both fast and economical.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <div class="prose lg:prose-xl mx-auto text-left">
@@ -242,53 +270,50 @@
                     <p class="section-subtitle">Selected projects showcasing the tapestry of my AI-driven creative work.</p>
                 </div>
                 <div class="text-center mb-8 animate-on-scroll delay-50" id="projectFilterControls">
-                    <button class="filter-btn neumorphic-outset active" data-filter="all">All</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="video">AI Video</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="image">AI Image</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="marketing">Marketing</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="audio">AI Audio</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="creative">Creative</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="video">AI Video</button>
+                    <button class="filter-btn" data-filter="image">AI Image</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="audio">AI Audio</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
                 </div>
             </div>
-            <div class="projects-outer-wrapper animate-on-scroll delay-100 relative">
-                <button id="scrollProjectsLeft" class="project-scroll-btn neumorphic-outset left hidden" aria-label="Scroll projects left"><i class="fas fa-chevron-left"></i></button>
-                <!-- =========== PROJECT CARDS RESTORED HERE =========== -->
-                <div class="horizontal-scroll-wrapper" id="projectScroller">
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal1" data-category="video marketing creative">
+            <div class="container mx-auto px-6 animate-on-scroll delay-100">
+                <div id="projectGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards will be dynamically inserted here by the filter, but statically placed for no-JS fallback -->
+                    <div class="project-card-kinetic" data-modal-target="projectModal1" data-category="video marketing creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-marketing.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Marketing"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Enhanced Marketing</h3><p class="text-sm text-gray-400">Multi-platform AI content campaign.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal3" data-category="video creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal3" data-category="video creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-film.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Film"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Video Generation Portfolio</h3><p class="text-sm text-gray-400">Narrative short films & AI video content.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal5" data-category="image creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal5" data-category="image creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-image.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Image"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Image Generation Showcase</h3><p class="text-sm text-gray-400">Stunning visuals with advanced AI.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal4" data-category="marketing">
+                    <div class="project-card-kinetic" data-modal-target="projectModal4" data-category="marketing">
                          <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-linkedin-brand.jpg" class="w-full h-full object-cover" loading="lazy" alt="LinkedIn Branding"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>LinkedIn Branding Overhaul</h3><p class="text-sm text-gray-400">Optimized profiles and AI content.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal2" data-category="creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal2" data-category="creative">
                          <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-data-viz.jpg" class="w-full h-full object-cover" loading="lazy" alt="Data Viz"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Interactive Data Viz</h3><p class="text-sm text-gray-400">Web-based P5.js interactive report.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal7" data-category="audio">
+                    <div class="project-card-kinetic" data-modal-target="projectModal7" data-category="audio">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-audio.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Audio"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Powered Audio Creations</h3><p class="text-sm text-gray-400">Voiceovers and custom music scores.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal8" data-category="video creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal8" data-category="video creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-lipsync.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Lip Sync"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Seamless AI Lip Sync</h3><p class="text-sm text-gray-400">High accuracy lip sync for AI avatars.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal6" data-category="creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal6" data-category="creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-prompt-eng.jpg" class="w-full h-full object-cover" loading="lazy" alt="Prompt Engineering"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Mastering AI Prompts</h3><p class="text-sm text-gray-400">Deep dive into prompt engineering.</p></div>
                     </div>
                 </div>
-                <!-- =================================================== -->
-                <button id="scrollProjectsRight" class="project-scroll-btn neumorphic-outset right" aria-label="Scroll projects right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
         

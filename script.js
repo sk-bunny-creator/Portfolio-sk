@@ -161,46 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- PROJECT SCROLLER & FILTERING (IMPROVED LOGIC) ---
-    const projectScroller = document.getElementById('projectScroller');
-    const scrollLeftBtn = document.getElementById('scrollProjectsLeft');
-    const scrollRightBtn = document.getElementById('scrollProjectsRight');
+    // --- PROJECT FILTERING ---
     const filterButtons = document.querySelectorAll('#projectFilterControls .filter-btn');
-    const projectCards = document.querySelectorAll('#projectScroller .project-card-kinetic');
-
-    function updateScrollButtonsVisibility() {
-        if (!projectScroller || !scrollLeftBtn || !scrollRightBtn) return;
-        const visibleCards = Array.from(projectCards).filter(card => !card.classList.contains('hidden-card') && card.offsetWidth > 0);
-        if (visibleCards.length === 0 || projectScroller.scrollWidth <= projectScroller.clientWidth + 5) {
-            scrollLeftBtn.classList.add('hidden');
-            scrollRightBtn.classList.add('hidden');
-            return;
-        }
-        const tolerance = 5;
-        const scrollAmount = Math.round(projectScroller.scrollLeft);
-        const maxScroll = Math.round(projectScroller.scrollWidth - projectScroller.clientWidth);
-        scrollLeftBtn.classList.toggle('hidden', scrollAmount <= tolerance);
-        scrollRightBtn.classList.toggle('hidden', scrollAmount >= maxScroll - tolerance);
-    }
-
-    if (projectScroller && scrollLeftBtn && scrollRightBtn) {
-        const scrollDistance = 355;
-        scrollLeftBtn.addEventListener('click', () => { projectScroller.scrollBy({ left: -scrollDistance, behavior: 'smooth' }); });
-        scrollRightBtn.addEventListener('click', () => { projectScroller.scrollBy({ left: scrollDistance, behavior: 'smooth' }); });
-        projectScroller.addEventListener('scroll', updateScrollButtonsVisibility, { passive: true });
-        if (typeof ResizeObserver !== 'undefined') {
-            new ResizeObserver(updateScrollButtonsVisibility).observe(projectScroller);
-        } else {
-            window.addEventListener('resize', updateScrollButtonsVisibility, { passive: true });
-        }
-        setTimeout(updateScrollButtonsVisibility, 350); 
-    }
+    const projectCards = document.querySelectorAll('#projectGrid .project-card-kinetic');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filterValue = button.dataset.filter;
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
+
             projectCards.forEach(card => {
                 const cardCategories = card.dataset.category ? card.dataset.category.split(' ') : [];
                 if (filterValue === 'all' || cardCategories.includes(filterValue)) {
@@ -209,10 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.classList.add('hidden-card');
                 }
             });
-            setTimeout(() => { 
-                projectScroller.scrollLeft = 0; 
-                updateScrollButtonsVisibility();
-            }, 350); 
         });
     });
 
@@ -318,6 +284,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- SKILL CARD FLIPPING ---
     const skillCards = document.querySelectorAll('.skill-card-container');
     skillCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
+
+    // --- PROCESS CARD FLIPPING ---
+    const processCards = document.querySelectorAll('.process-card-container');
+    processCards.forEach(card => {
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');
         });
