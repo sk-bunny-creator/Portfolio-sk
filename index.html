@@ -270,53 +270,50 @@
                     <p class="section-subtitle">Selected projects showcasing the tapestry of my AI-driven creative work.</p>
                 </div>
                 <div class="text-center mb-8 animate-on-scroll delay-50" id="projectFilterControls">
-                    <button class="filter-btn neumorphic-outset active" data-filter="all">All</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="video">AI Video</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="image">AI Image</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="marketing">Marketing</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="audio">AI Audio</button>
-                    <button class="filter-btn neumorphic-outset" data-filter="creative">Creative</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="video">AI Video</button>
+                    <button class="filter-btn" data-filter="image">AI Image</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="audio">AI Audio</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
                 </div>
             </div>
-            <div class="projects-outer-wrapper animate-on-scroll delay-100 relative">
-                <button id="scrollProjectsLeft" class="project-scroll-btn neumorphic-outset left hidden" aria-label="Scroll projects left"><i class="fas fa-chevron-left"></i></button>
-                <!-- =========== PROJECT CARDS RESTORED HERE =========== -->
-                <div class="horizontal-scroll-wrapper" id="projectScroller">
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal1" data-category="video marketing creative">
+            <div class="container mx-auto px-6 animate-on-scroll delay-100">
+                <div id="projectGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards will be dynamically inserted here by the filter, but statically placed for no-JS fallback -->
+                    <div class="project-card-kinetic" data-modal-target="projectModal1" data-category="video marketing creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-marketing.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Marketing"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Enhanced Marketing</h3><p class="text-sm text-gray-400">Multi-platform AI content campaign.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal3" data-category="video creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal3" data-category="video creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-film.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Film"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Video Generation Portfolio</h3><p class="text-sm text-gray-400">Narrative short films & AI video content.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal5" data-category="image creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal5" data-category="image creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-image.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Image"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI Image Generation Showcase</h3><p class="text-sm text-gray-400">Stunning visuals with advanced AI.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal4" data-category="marketing">
+                    <div class="project-card-kinetic" data-modal-target="projectModal4" data-category="marketing">
                          <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-linkedin-brand.jpg" class="w-full h-full object-cover" loading="lazy" alt="LinkedIn Branding"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>LinkedIn Branding Overhaul</h3><p class="text-sm text-gray-400">Optimized profiles and AI content.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal2" data-category="creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal2" data-category="creative">
                          <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-data-viz.jpg" class="w-full h-full object-cover" loading="lazy" alt="Data Viz"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Interactive Data Viz</h3><p class="text-sm text-gray-400">Web-based P5.js interactive report.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal7" data-category="audio">
+                    <div class="project-card-kinetic" data-modal-target="projectModal7" data-category="audio">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-audio.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Audio"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>AI-Powered Audio Creations</h3><p class="text-sm text-gray-400">Voiceovers and custom music scores.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal8" data-category="video creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal8" data-category="video creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-ai-lipsync.jpg" class="w-full h-full object-cover" loading="lazy" alt="AI Lip Sync"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Seamless AI Lip Sync</h3><p class="text-sm text-gray-400">High accuracy lip sync for AI avatars.</p></div>
                     </div>
-                    <div class="project-card-kinetic neumorphic-outset" data-modal-target="projectModal6" data-category="creative">
+                    <div class="project-card-kinetic" data-modal-target="projectModal6" data-category="creative">
                         <div class="h-48 overflow-hidden relative project-image-container"><img src="assets/images/project-prompt-eng.jpg" class="w-full h-full object-cover" loading="lazy" alt="Prompt Engineering"><div class="project-overlay"><span class="view-project-btn">View Project</span></div></div>
                         <div class="content"><h3>Mastering AI Prompts</h3><p class="text-sm text-gray-400">Deep dive into prompt engineering.</p></div>
                     </div>
                 </div>
-                <!-- =================================================== -->
-                <button id="scrollProjectsRight" class="project-scroll-btn neumorphic-outset right" aria-label="Scroll projects right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
         
